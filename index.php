@@ -11,16 +11,16 @@ require './includes/person.inc.php';
 <body>
     <?php
     
-    $person1 = new Person();
-    $person1->setName("John Wick");
+    $person1 = new Person("Sándor", 25, "brown");
 
-    echo $person1->name;
-    echo "<br>";
 
-    $person2 = new Person();
-    $person2->setName("Babayega");
-    echo $person2->name;
+    // echo $person1->name ;
+    // echo "<br>";
+    // echo $person1->age ;
+    // echo "<br>";
+    // echo $person1->eyeColor ;
     
+    echo $person1->getName();
     ?>
 
 </body>
