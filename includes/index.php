@@ -1,5 +1,6 @@
 <?php
 require './includes/person.inc.php';
+require './includes/house.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
