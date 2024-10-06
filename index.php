@@ -19,8 +19,16 @@ require './includes/person.inc.php';
     // echo $person1->age ;
     // echo "<br>";
     // echo $person1->eyeColor ;
-    
-    echo $person1->getName();
+
+    echo Person::$drinkingAge;
+
+    Person::setDrinkingAge(21);
+
+    echo "<br>";
+
+    echo Person::$drinkingAge;
+
+    // echo $person1->getName();
     ?>
 
 </body>
