@@ -5,13 +5,17 @@ class Person {
     private $age;    
     private $eyeColor;
 
+    public static $drinkingAge = 18;
+
     public function __construct($name, $age, $eyeColor){
         $this->name = $name;
         $this->age = $age;
         $this->eyeColor = $eyeColor;
     }
 
-    public static $drinkingAge = 18;
+    public function getDrinkingAge(){
+        return self::$drinkingAge;
+    }
 
     public function setName($name){
         $this->name = $name;
