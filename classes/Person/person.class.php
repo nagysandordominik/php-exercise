@@ -1,5 +1,5 @@
 <?php
-namespace Person {
+namespace Person ;
     class Person
     {
 
@@ -40,5 +40,5 @@ namespace Person {
         }
 
     }
-}
+
 ?>

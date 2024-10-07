@@ -12,7 +12,7 @@ include 'includes/autoloader.inc.php';
 <body>
     <?php
     
-    $person1 = new Person("Sándor", 25, "brown");
+    $person1 = new Person\Person("Sándor", 25, "brown");
 
 
     // echo $person1->name ;
@@ -24,12 +24,14 @@ include 'includes/autoloader.inc.php';
     
 
     // Person::setDrinkingAge(21);
+;
 
     echo "<br>";
 
     echo $person1->getDrinkingAge();
 
     // echo $person1->getName();
+
     ?>
 
 </body>
