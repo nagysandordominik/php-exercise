@@ -1,6 +1,10 @@
 <?php
-include 'includes/autoloader.inc.php';
 
+declare(strict_types = 1);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+include 'includes/autoloader.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,27 +15,38 @@ include 'includes/autoloader.inc.php';
 </head>
 <body>
     <?php
-    
-    $person1 = new Person\Person("Sándor", 25, "brown");
+    echo "Script started.<br>";
+    $person1 = new Person();
+    try {
+        $person1->setName(2);
+        echo $person1->getName();
+    } catch(TypeError $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    // echo "Script started.<br>";
 
+    // try {
+    //     $person1 = new Person('John', 25, 'blue');
+    //     echo "Person object created.<br>";
 
-    // echo $person1->name ;
-    // echo "<br>";
-    // echo $person1->age ;
-    // echo "<br>";
-    // echo $person1->eyeColor ;
+    //     echo "<br>";
+    //     echo "Name: " . $person1->getName() . "<br>";
+    //     echo "Age: " . $person1->getAge() . "<br>";
+    //     echo "Eye Color: " . $person1->getEyeColor() . "<br>";
 
-    
+    //     // Person::setDrinkingAge(21);
+    //     // echo "<br>";
+    //     // echo $person1->getDrinkingAge();
 
-    // Person::setDrinkingAge(21);
-;
+    //     $person1->setName("Jane");
+    //     echo "Updated Name: " . $person1->getName() . "<br>";
+    // } catch (TypeError $e) {
+    //     echo "Error: " . $e->getMessage();
+    // } catch (Exception $e) {
+    //     echo "General Error: " . $e->getMessage();
+    // }
 
-    echo "<br>";
-
-    echo $person1->getDrinkingAge();
-
-    // echo $person1->getName();
-
+    // echo "Script ended.<br>";
     ?>
 
 </body>

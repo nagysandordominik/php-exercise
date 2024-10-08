@@ -12,4 +12,3 @@ function myAutoLoader($className){
 
     include_once $fullPath;
 }
-?>
